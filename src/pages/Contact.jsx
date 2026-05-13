@@ -1,4 +1,10 @@
-import { FaPhoneAlt, FaFax, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaFax,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaClock,
+} from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -10,29 +16,61 @@ export default function Contact() {
 
       <section className="section">
         <div className="contact-layout">
-          <div className="contact-card">
+          <div className="contact-info-card">
             <h2>Bethel Medical Centres</h2>
 
-            <p><FaMapMarkerAlt /> 120 Edgefield Place, Strathmore, AB T1P 0E8</p>
-            <p><FaPhoneAlt /> 587-251-7220</p>
-            <p><FaFax /> 833-527-8678</p>
-            <p><FaEnvelope /> info@bethelmedicalcentres.ca</p>
+            <div className="contact-item">
+              <FaMapMarkerAlt />
+              <span>120 Edgefield Place, Strathmore, AB T1P 0E8</span>
+            </div>
+
+            <div className="contact-item">
+              <FaPhoneAlt />
+              <span>587-251-7220</span>
+            </div>
+
+            <div className="contact-item">
+              <FaFax />
+              <span>833-527-8678</span>
+            </div>
+
+            <div className="contact-item">
+              <FaEnvelope />
+              <span>info@bethelmedicalcentres.ca</span>
+            </div>
           </div>
 
-          <div className="contact-card">
+          <div className="contact-info-card hours-card">
             <h2>Clinic Hours</h2>
-            <p>Monday – Friday: Please call clinic</p>
-            <p>Saturday: Please call clinic</p>
-            <p>Sunday: Closed</p>
-          </div>
 
-          <div className="map-card">
-            <iframe
-              title="Bethel Medical Centres Map"
-              src="https://www.google.com/maps?q=120%20Edgefield%20Place%20Strathmore%20AB%20T1P%200E8&output=embed"
-              loading="lazy"
-            ></iframe>
+            <div className="hours-row">
+              <span>Monday – Friday</span>
+              <strong>Please call clinic</strong>
+            </div>
+
+            <div className="hours-row">
+              <span>Saturday</span>
+              <strong>Please call clinic</strong>
+            </div>
+
+            <div className="hours-row">
+              <span>Sunday</span>
+              <strong>Closed</strong>
+            </div>
+
+            <div className="hours-note">
+              <FaClock />
+              <span>Appointment availability may vary. Please call before visiting.</span>
+            </div>
           </div>
+        </div>
+
+        <div className="map-section">
+          <iframe
+            title="Bethel Medical Centres Map"
+            src="https://www.google.com/maps?q=120%20Edgefield%20Place%20Strathmore%20AB%20T1P%200E8&output=embed"
+            loading="lazy"
+          ></iframe>
         </div>
       </section>
     </>

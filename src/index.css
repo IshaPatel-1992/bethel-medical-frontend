@@ -19,6 +19,10 @@
   --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", Arial, sans-serif;
   background: var(--light-bg);
@@ -44,6 +48,7 @@ main {
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-top: 4px solid var(--green-dark);
 }
 
 .top-bar {
@@ -63,56 +68,73 @@ main {
 }
 
 .main-nav {
-  padding: 14px 6%;
+  min-height: 96px;
+  padding: 10px 6%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 28px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
+  text-decoration: none;
+  min-width: 330px;
 }
 
 .brand-logo {
-  width: 86px;
-  height: 86px;
+  width: 82px;
+  height: 82px;
   object-fit: contain;
-  border-radius: 50%;
-  background: var(--white);
-  padding: 8px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+  display: block;
+  flex-shrink: 0;
+  transform: scale(1.55);
+  transform-origin: center;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
 }
 
-.brand h1 {
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-text h1 {
   color: var(--green-dark);
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.08;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  margin: 0;
+  max-width: 270px;
 }
 
-.brand p {
+.brand-text p {
   color: var(--green-main);
-  margin-top: 8px;
-  font-size: 15px;
+  margin-top: 4px;
+  font-size: 13px;
   font-weight: 500;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  margin-left: auto;
 }
 
 .nav a {
   color: var(--text-dark);
-  padding: 10px 16px;
+  padding: 9px 14px;
   border-radius: 999px;
   font-weight: 700;
+  font-size: 15px;
   transition: 0.25s ease;
 }
 
@@ -127,6 +149,7 @@ main {
   background: none;
   border: none;
   cursor: pointer;
+  padding: 6px;
 }
 
 .menu-toggle span {
@@ -223,32 +246,33 @@ main {
   margin-bottom: 36px;
 }
 
-.grid {
+.grid,
+.service-grid,
+.appointment-layout,
+.about-cards,
+.doctor-contact-grid {
   display: grid;
   gap: 28px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-.card {
+.grid,
+.service-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card,
+.service-card,
+.appointment-card,
+.about-card,
+.doctor-profile-card,
+.contact-card,
+.map-card {
   background: var(--white);
-  border-radius: 20px;
-  padding: 30px;
   box-shadow: var(--shadow);
-  border-top: 5px solid var(--green-mint);
-}
-
-.card h3 {
-  color: var(--green-dark);
-  margin-bottom: 10px;
-  font-size: 22px;
-}
-
-.card p {
-  color: var(--text-muted);
 }
 
 /* ----------------------------------------------------
-   ABOUT PAGE
+   PAGE HERO
 ---------------------------------------------------- */
 .page-hero {
   background: linear-gradient(135deg, var(--green-dark), var(--green-main));
@@ -270,6 +294,9 @@ main {
   font-size: 18px;
 }
 
+/* ----------------------------------------------------
+   ABOUT PAGE
+---------------------------------------------------- */
 .about-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -311,17 +338,13 @@ main {
 }
 
 .about-cards {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
   margin-top: 30px;
 }
 
 .about-card {
-  background: var(--white);
   padding: 28px;
   border-radius: 20px;
-  box-shadow: var(--shadow);
 }
 
 .about-card h3 {
@@ -355,166 +378,60 @@ main {
 }
 
 /* ----------------------------------------------------
-   FOOTER
+   SERVICES / DEPARTMENTS
 ---------------------------------------------------- */
-.site-footer {
-  background: linear-gradient(135deg, var(--green-dark), var(--green-main));
+.service-card {
+  border-radius: 24px;
+  padding: 34px 30px;
+  border-top: 5px solid var(--green-mint);
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.service-card:hover,
+.appointment-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-icon {
+  width: 82px;
+  height: 82px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-dark), var(--green-mint));
   color: var(--white);
-  margin-top: 60px;
-}
-
-.footer-content {
-  padding: 54px 6%;
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1.4fr;
-  gap: 40px;
-}
-
-.site-footer h3 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.site-footer h4 {
-  margin-bottom: 14px;
-  color: #bfffe6;
-}
-
-.site-footer a,
-.site-footer p {
-  color: var(--white);
-  display: block;
-  margin: 8px 0;
-}
-
-.site-footer p {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 10px 24px rgba(8, 115, 79, 0.22);
 }
 
-.footer-bottom {
-  background: var(--green-mint);
-  color: #063b2b;
-  text-align: center;
-  padding: 14px;
-  font-weight: 800;
+.service-card h3 {
+  color: var(--green-dark);
+  font-size: 22px;
+  margin: 20px 0 12px;
 }
 
-/* ----------------------------------------------------
-   RESPONSIVE
----------------------------------------------------- */
-@media (max-width: 1000px) {
-  .main-nav {
-    flex-wrap: wrap;
-  }
-
-  .nav {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+.service-card p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.7;
 }
 
-@media (max-width: 768px) {
-  .top-bar {
-    flex-direction: column;
-    font-size: 13px;
-  }
-
-  .main-nav {
-    position: relative;
-  }
-
-  .brand-logo {
-    width: 68px;
-    height: 68px;
-  }
-
-  .brand h1 {
-    font-size: 20px;
-  }
-
-  .brand p {
-    font-size: 13px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--white);
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 18px;
-    box-shadow: var(--shadow);
-  }
-
-  .nav.open {
-    display: flex;
-  }
-
-  .nav a {
-    text-align: center;
-  }
-
-  .hero {
-    min-height: 520px;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .hero-actions {
-    justify-content: center;
-  }
-
-  .about-intro {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-strip {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-/* ----------------------------------------------------
-   Appointment Page
----------------------------------------------------- */
 /* ----------------------------------------------------
    APPOINTMENT PAGE
 ---------------------------------------------------- */
-
 .appointment-layout {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
   margin-top: 20px;
 }
 
 .appointment-card {
-  background: var(--white);
   border-radius: 24px;
   padding: 36px 32px;
-  box-shadow: var(--shadow);
   transition: 0.3s ease;
   border-top: 5px solid var(--green-mint);
-}
-
-.appointment-card:hover {
-  transform: translateY(-6px);
 }
 
 .appointment-card.highlight {
@@ -572,101 +489,12 @@ main {
   font-weight: 600;
 }
 
-.service-icon {
-  width: 74px;
-  height: 74px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background: linear-gradient(
-    135deg,
-    var(--green-dark),
-    var(--green-mint)
-  );
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  box-shadow: 0 10px 24px rgba(8, 115, 79, 0.22);
-}
-
-@media (max-width: 768px) {
-  .appointment-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .appointment-card {
-    padding: 28px 24px;
-  }
-
-  .appointment-card h2 {
-    font-size: 28px;
-  }
-
-  .appointment-phone {
-    font-size: 34px;
-  }
-}
-
-/* ----------------------------------------------------
-   SERVICES / DEPARTMENTS PAGES
----------------------------------------------------- */
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.service-card {
-  background: var(--white);
-  border-radius: 24px;
-  padding: 34px 30px;
-  box-shadow: var(--shadow);
-  border-top: 5px solid var(--green-mint);
-  transition: 0.3s ease;
-  text-align: center;
-}
-
-.service-card:hover {
-  transform: translateY(-6px);
-}
-
-.service-card h3 {
-  color: var(--green-dark);
-  font-size: 22px;
-  margin: 20px 0 12px;
-}
-
-.service-card p {
-  color: var(--text-muted);
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.service-card .service-icon {
-  margin: 0 auto 18px;
-}
-
-@media (max-width: 768px) {
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .service-card {
-    padding: 28px 24px;
-  }
-}
-
 /* ----------------------------------------------------
    DOCTORS PAGE
 ---------------------------------------------------- */
-
 .doctor-profile-card {
-  background: var(--white);
   border-radius: 28px;
   padding: 42px;
-  box-shadow: var(--shadow);
   display: grid;
   grid-template-columns: 160px 1fr;
   gap: 34px;
@@ -712,9 +540,8 @@ main {
 
 .doctor-contact-grid {
   margin-top: 24px;
-  display: grid;
-  gap: 14px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
 }
 
 .doctor-contact-grid p {
@@ -732,11 +559,195 @@ main {
   color: var(--green-dark);
 }
 
+/* ----------------------------------------------------
+   FOOTER
+---------------------------------------------------- */
+.site-footer {
+  background: linear-gradient(135deg, var(--green-dark), var(--green-main));
+  color: var(--white);
+  margin-top: 60px;
+}
+
+.footer-content {
+  padding: 54px 6%;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.4fr;
+  gap: 40px;
+}
+
+.site-footer h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.site-footer h4 {
+  margin-bottom: 14px;
+  color: #bfffe6;
+}
+
+.site-footer a,
+.site-footer p {
+  color: var(--white);
+  display: block;
+  margin: 8px 0;
+}
+
+.site-footer p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-bottom {
+  background: var(--green-mint);
+  color: #063b2b;
+  text-align: center;
+  padding: 14px;
+  font-weight: 800;
+}
+
+/* ----------------------------------------------------
+   RESPONSIVE
+---------------------------------------------------- */
+@media (max-width: 1180px) {
+  .main-nav {
+    flex-wrap: wrap;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+
+  .brand {
+    min-width: auto;
+  }
+}
+
 @media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+    padding: 6px 5%;
+  }
+
+  .main-nav {
+    min-height: 82px;
+    padding: 8px 5%;
+    position: relative;
+    flex-wrap: nowrap;
+  }
+
+  .brand {
+    min-width: auto;
+    max-width: calc(100% - 52px);
+    gap: 8px;
+  }
+
+  .brand-logo {
+    width: 58px;
+    height: 58px;
+    transform: scale(1.55);
+  }
+
+  .brand-text h1 {
+    font-size: 16px;
+    line-height: 1.05;
+    max-width: 190px;
+  }
+
+  .brand-text p {
+    font-size: 11px;
+    margin-top: 3px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: var(--white);
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    box-shadow: var(--shadow);
+    border-radius: 0 0 18px 18px;
+    z-index: 999;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    text-align: center;
+    padding: 13px 16px;
+    font-size: 15px;
+  }
+
+  .hero {
+    min-height: 520px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .page-hero {
+    padding: 60px 6%;
+  }
+
+  .page-hero h1 {
+    font-size: 36px;
+  }
+
+  .section,
+  .about-wrapper {
+    padding: 60px 6%;
+  }
+
+  .about-intro,
   .doctor-profile-card {
     grid-template-columns: 1fr;
     text-align: center;
-    padding: 32px 24px;
+  }
+
+  .cta-strip {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .appointment-layout,
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-card,
+  .service-card,
+  .doctor-profile-card {
+    padding: 28px 24px;
+  }
+
+  .appointment-card h2 {
+    font-size: 28px;
+  }
+
+  .appointment-phone {
+    font-size: 34px;
   }
 
   .doctor-profile-icon {
@@ -749,5 +760,9 @@ main {
 
   .doctor-profile-content h2 {
     font-size: 30px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
   }
 }

@@ -14,15 +14,14 @@ export default function Header() {
       </div>
 
       <div className="main-nav">
-        <Link to="/" className="brand">
-          
+        <Link to="/" className="brand" onClick={() => setMenuOpen(false)}>
           <img
             src={logo}
             alt="Bethel Medical Centres"
             className="brand-logo"
           />
 
-          <div>
+          <div className="brand-text">
             <h1>Bethel Medical Centres</h1>
             <p>Your Health is Our Priority</p>
           </div>
@@ -38,13 +37,13 @@ export default function Header() {
         </button>
 
         <nav className={menuOpen ? "nav open" : "nav"}>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/services">Services</NavLink>
-          <NavLink to="/departments">Departments</NavLink>
-          <NavLink to="/doctors">Doctors</NavLink>
-          <NavLink to="/appointment">Appointment</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/" onClick={() => setMenuOpen(false)}>Home</NavLink>
+          <NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
+          <NavLink to="/services" onClick={() => setMenuOpen(false)}>Services</NavLink>
+          <NavLink to="/departments" onClick={() => setMenuOpen(false)}>Departments</NavLink>
+          <NavLink to="/doctors" onClick={() => setMenuOpen(false)}>Doctors</NavLink>
+          <NavLink to="/appointment" onClick={() => setMenuOpen(false)}>Appointment</NavLink>
+          <NavLink to="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink>
         </nav>
       </div>
     </header>

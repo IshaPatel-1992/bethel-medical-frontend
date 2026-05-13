@@ -1,9 +1,14 @@
-// src/components/ServiceCard.jsx
-export default function ServiceCard({ title, description }) {
+import { Stethoscope } from "lucide-react";
+
+export default function ServiceCard({ title, description, icon }) {
   return (
-    <article className="card">
+    <div className="service-card">
+      <div className="service-icon">
+        {icon || <Stethoscope size={34} />}
+      </div>
+
       <h3>{title}</h3>
       <p>{description}</p>
-    </article>
+    </div>
   );
 }

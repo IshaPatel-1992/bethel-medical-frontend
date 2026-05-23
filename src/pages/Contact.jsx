@@ -99,12 +99,40 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="map-section">
-          <iframe
-            title="Bethel Medical Centres Map"
-            src="https://www.google.com/maps?q=120%20Edgefield%20Place%20Strathmore%20AB%20T1P%200E8&output=embed"
-            loading="lazy"
-          ></iframe>
+        <div className="location-map-card">
+          <div className="location-map-header">
+            <div>
+              <span className="section-label">Our Location</span>
+              <h3>Visit Bethel Medical Centres</h3>
+              <p>
+                Conveniently located in Strathmore, AB. Please call before visiting for
+                appointment availability.
+              </p>
+            </div>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=120%20Edgefield%20Place%20Strathmore%20AB%20T1P%200E8"
+              target="_blank"
+              rel="noreferrer"
+              className="map-direction-btn"
+            >
+              <FaMapMarkerAlt />
+              Open in Google Maps
+            </a>
+          </div>
+
+          <div className="map-address-pill">
+            <FaMapMarkerAlt />
+            <span>120 Edgefield Place, Strathmore, AB T1P 0E8</span>
+          </div>
+
+          <div className="map-section">
+            <iframe
+              title="Bethel Medical Centres Map"
+              src="https://www.google.com/maps?q=120%20Edgefield%20Place%20Strathmore%20AB%20T1P%200E8&output=embed"
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
       </section>
     </>

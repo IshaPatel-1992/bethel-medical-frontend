@@ -11,20 +11,40 @@ export default function Contact() {
     <>
       <section className="page-hero">
         <h1>Contact Us</h1>
-        <p>We are here to help you and your family with your healthcare needs.</p>
+        <p>
+          We are here to support you and your family with compassionate healthcare.
+        </p>
       </section>
 
-      <section className="section">
+      <section className="section contact-section">
+        <div className="section-heading-center">
+          <span className="section-label">Get In Touch</span>
+          <h2>Contact Bethel Medical Centres</h2>
+          <p>
+            Please call or email the clinic for appointments, inquiries, and
+            patient information.
+          </p>
+        </div>
+
         <div className="contact-layout">
-          <div className="contact-info-card">
-            <h2>Bethel Medical Centres</h2>
+          <div className="about-card contact-card">
+            <div className="about-card-icon">
+              <FaMapMarkerAlt />
+            </div>
+
+            <h3>Clinic Information</h3>
 
             <div className="contact-item">
               <FaMapMarkerAlt />
               <span>120 Edgefield Place, Strathmore, AB T1P 0E8</span>
             </div>
 
-            <div className="contact-item">
+            <a href="tel:15872517220" className="contact-action-btn phone-btn">
+              <FaPhoneAlt />
+              Call Clinic
+            </a>
+
+            <div className="contact-detail-line">
               <FaPhoneAlt />
               <span>587-251-7220</span>
             </div>
@@ -34,14 +54,26 @@ export default function Contact() {
               <span>833-527-8678</span>
             </div>
 
-            <div className="contact-item">
+            <a
+              href="mailto:info@bethelmedicalcentres.ca"
+              className="contact-action-btn email-btn"
+            >
+              <FaEnvelope />
+              Email Clinic
+            </a>
+
+            <div className="contact-detail-line">
               <FaEnvelope />
               <span>info@bethelmedicalcentres.ca</span>
             </div>
           </div>
 
-          <div className="contact-info-card hours-card">
-            <h2>Clinic Hours</h2>
+          <div className="about-card contact-card">
+            <div className="about-card-icon">
+              <FaClock />
+            </div>
+
+            <h3>Clinic Hours</h3>
 
             <div className="hours-row">
               <span>Monday – Friday</span>
@@ -60,7 +92,9 @@ export default function Contact() {
 
             <div className="hours-note">
               <FaClock />
-              <span>Appointment availability may vary. Please call before visiting.</span>
+              <span>
+                Appointment availability may vary. Please call before visiting.
+              </span>
             </div>
           </div>
         </div>

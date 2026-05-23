@@ -1,5 +1,6 @@
 import {
   FaPhoneAlt,
+  FaEnvelope,
   FaUserPlus,
   FaClock,
   FaClinicMedical,
@@ -10,76 +11,60 @@ export default function Appointment() {
     <>
       <section className="page-hero">
         <h1>Appointments & Patient Information</h1>
-        <p>
-          Bethel Medical Centres is currently accepting new patients.
-        </p>
+        <p>Bethel Medical Centres is currently accepting new patients.</p>
       </section>
 
-      <section className="section">
+      <section className="section appointment-section">
+        <div className="section-heading-center">
+          <span className="section-label">Book Your Visit</span>
+          <h2>Phone & Email Booking Available</h2>
+          <p>No online form is required. Please contact the clinic directly.</p>
+        </div>
+
         <div className="appointment-layout">
+          <div className="about-card appointment-card">
+            <div className="about-card-icon"><FaPhoneAlt /></div>
+            <h3>Book by Phone</h3>
+            <p>Please call our clinic to schedule your appointment.</p>
 
-          {/* Existing Patients */}
-          <div className="appointment-card">
-            <div className="service-icon">
+            <a href="tel:15872517220" className="appointment-action-btn phone-btn">
               <FaPhoneAlt />
-            </div>
-
-            <h2>Book by Phone</h2>
-
-            <p>
-              Please contact our clinic directly to schedule an appointment.
-            </p>
-
-            <h3 className="appointment-phone">
-              587-251-7220
-            </h3>
-
-            <p className="small-text">
-              Our clinic staff will assist you with appointment availability.
-            </p>
+              Call 587-251-7220
+            </a>
           </div>
 
-          {/* New Patients */}
-          <div className="appointment-card">
-            <div className="service-icon">
-              <FaUserPlus />
-            </div>
-
-            <h2>New Patients</h2>
-
-            <p>
-              We are welcoming new patients and families to our clinic.
-            </p>
-
-            <p>
-              Please call the clinic for registration and appointment assistance.
-            </p>
-
-            <div className="coming-soon">
-              Online Registration Coming Soon
-            </div>
+          <div className="about-card appointment-card">
+            <div className="about-card-icon"><FaEnvelope /></div>
+            <h3>Book by Email</h3>
+            <p>Email us for appointment inquiries and clinic information.</p>
+            <a
+              href="mailto:info@bethelmedicalcentres.ca"
+              className="appointment-action-btn email-btn"
+            >
+              <FaEnvelope />
+              Email Clinic
+            </a>
           </div>
 
-          {/* Clinic Information */}
-          <div className="appointment-card highlight">
-            <div className="service-icon">
-              <FaClinicMedical />
-            </div>
+          <div className="about-card appointment-card highlight">
+            <div className="about-card-icon"><FaUserPlus /></div>
+            <h3>New Patients Welcome</h3>
+            <p>We are welcoming new patients and families to our clinic.</p>
+            <div className="coming-soon">Please call or email for registration assistance.</div>
+          </div>
 
-            <h2>Clinic Information</h2>
-
+          <div className="about-card appointment-card highlight">
+            <div className="about-card-icon"><FaClinicMedical /></div>
+            <h3>Clinic Services</h3>
             <p>
-              Family medicine, preventive care, annual physicals,
-              women’s health, pediatric care, chronic disease management,
-              and immunizations.
+              Family medicine, preventive care, annual physicals, women’s health,
+              pediatric care, chronic disease management, and immunizations.
             </p>
-
             <div className="clinic-hours">
               <FaClock />
               <span>Please call clinic for hours & availability.</span>
             </div>
           </div>
-
         </div>
       </section>
     </>

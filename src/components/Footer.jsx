@@ -27,10 +27,17 @@ export default function Footer() {
 
         <section className="footer-links">
           <h4>Quick Links</h4>
+
           <Link to="/">Home</Link>
-          <Link to="/services">Services</Link>
+
+          <a href="/#services">Services</a>
+
+          <a href="/#departments">Departments</a>
+
           <Link to="/doctors">Doctors</Link>
+
           <Link to="/appointment">Book Appointment</Link>
+
           <Link to="/contact">Contact</Link>
         </section>
 

@@ -41,9 +41,9 @@ export default function Hero() {
               <Link to="/appointment" className="btn primary">
                 Book Appointment
               </Link>
-              <Link to="/services" className="btn secondary">
+              <a href="/#services" className="btn secondary">
                 View Services
-              </Link>
+              </a>
             </div>
           </div>
 

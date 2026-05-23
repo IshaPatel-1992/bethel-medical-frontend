@@ -40,30 +40,34 @@ const departments = [
   },
 ];
 
-export default function Departments() {
+export default function HomeDepartments() {
   return (
-    <>
-      <section className="page-hero">
-        <h1>Our Departments</h1>
-        <p>Organized care areas designed to support every stage of health.</p>
-      </section>
+    <section id="departments" className="departments-home-section">
+      <div className="section">
+        <div className="section-heading-center">
+          <span className="section-label">Departments</span>
+          <h2>Organized Care Areas</h2>
+          <p>
+            Our departments help patients easily understand the care available
+            at Bethel Medical Centres.
+          </p>
+        </div>
 
-      <section className="section">
-        <div className="department-grid">
+        <div className="department-list">
           {departments.map((department) => (
-            <div className="department-card" key={department.title}>
-
-              <div className="department-icon">
+            <div className="department-row" key={department.title}>
+              <div className="department-row-icon">
                 {department.icon}
               </div>
 
-              <h3>{department.title}</h3>
-              <p>{department.text}</p>
-
+              <div>
+                <h3>{department.title}</h3>
+                <p>{department.text}</p>
+              </div>
             </div>
           ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

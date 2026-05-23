@@ -7,7 +7,6 @@ import {
   ShieldPlus,
 } from "lucide-react";
 
-/* ================= IMAGES ================= */
 import familyCareImg from "../assets/services/edited/bethel-family-medicine-card.webp";
 import preventiveImg from "../assets/services/edited/bethel-preventive-health-card.webp";
 import pediatricImg from "../assets/services/edited/bethel-pediatric.png";
@@ -54,24 +53,22 @@ const services = [
   },
 ];
 
-export default function Services() {
+export default function HomeServices() {
   return (
-    <>
-      {/* ================= HERO ================= */}
-      <section className="page-hero">
-        <h1>Our Services</h1>
-        <p>
-          Comprehensive healthcare services for you and your family.
-        </p>
-      </section>
+    <section id="services" className="services-home-section">
+      <div className="section">
+        <div className="section-heading-center">
+          <span className="section-label">Our Services</span>
+          <h2>Comprehensive Healthcare Services</h2>
+          <p>
+            Medical care designed to support you and your family at every stage
+            of life.
+          </p>
+        </div>
 
-      {/* ================= SERVICES ================= */}
-      <section className="section">
         <div className="service-grid">
           {services.map((service) => (
             <div className="service-card" key={service.title}>
-              
-              {/* IMAGE */}
               <div className="service-image-wrapper">
                 <img
                   src={service.image}
@@ -79,13 +76,9 @@ export default function Services() {
                   className="service-image"
                 />
 
-                {/* ICON BADGE */}
-                <div className="service-icon">
-                  {service.icon}
-                </div>
+                <div className="service-icon">{service.icon}</div>
               </div>
 
-              {/* CONTENT */}
               <div className="service-content">
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
@@ -93,7 +86,7 @@ export default function Services() {
             </div>
           ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

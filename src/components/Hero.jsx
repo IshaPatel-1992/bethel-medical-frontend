@@ -5,7 +5,7 @@ import heroVideo from "../assets/services/1090224597-preview.mp4";
 export default function Hero() {
   const marqueeItems = [
     "Accepting New Patients",
-    "Chronic Disease Management",
+    "Chronic Health Conditions Management and Ongoing Care",
     "Preventive Healthcare & Annual Physicals",
     "Walk-In & Family Medical Services",
     "Women's Health Services",

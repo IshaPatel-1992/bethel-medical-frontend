@@ -16,10 +16,16 @@ import vaccineImg from "../assets/services/edited/bethel-flu-vaccination-immuniz
 
 const services = [
   {
-    title: "Walk-In & Family Medical Services",
-    text: "Comprehensive primary healthcare services for individuals and families, including diagnosis, treatment, and ongoing medical support.",
+    title: "Accepting New Patients",
+    text: "Welcoming new patients and families seeking comprehensive primary healthcare services.",
     icon: <Stethoscope size={28} />,
     image: familyCareImg,
+  },
+  {
+    title: "Chronic Health Conditions Management",
+    text: "Ongoing care and support for diabetes, hypertension, asthma, and other ongoing long-term health conditions.",
+    icon: <Activity size={28} />,
+    image: chronicImg,
   },
   {
     title: "Preventive Healthcare & Annual Physicals",
@@ -28,50 +34,38 @@ const services = [
     image: preventiveImg,
   },
   {
+    title: "Walk-In & Family Medical Services",
+    text: "Comprehensive primary healthcare services for individuals and families, including diagnosis, treatment, and ongoing medical care.",
+    icon: <Stethoscope size={28} />,
+    image: familyCareImg,
+  },
+  {
+    title: "Women's Health Services",
+    text: "Comprehensive healthcare services including mammogram referrals, breast ultrasound referrals, routine examinations, cervical screening, family planning, and preventive care.",
+    icon: <HeartPulse size={28} />,
+    image: womenHealthImg,
+  },
+  {
+    title: "Men's Health Services",
+    text: "Preventive healthcare, routine assessments, health screening, and medical support tailored to men's health needs.",
+    icon: <HeartPulse size={28} />,
+    image: familyCareImg,
+  },
+  {
     title: "Paediatric Care Services",
     text: "Dedicated healthcare services for infants, children, and adolescents.",
     icon: <Baby size={28} />,
     image: pediatricImg,
   },
   {
-    title: "Women’s Health Services",
-    text: "Comprehensive healthcare services including routine examinations, cervical screening, family planning, and preventive care.",
-    icon: <HeartPulse size={28} />,
-    image: womenHealthImg,
-  },
-  {
-    title: "Men’s Health Services",
-    text: "Preventive healthcare, routine assessments, health screening, and medical support tailored to men's health needs.",
-    icon: <HeartPulse size={28} />,
-    image: familyCareImg,
-  },
-  {
-  title: "Elderly Care Services",
-  text: "Compassionate healthcare and ongoing support for older adults within our community, promoting healthy ageing, independence, and quality of life.",
-  icon: <HeartPulse size={28} />,
-  image: familyCareImg,
-},
-  {
-    title: "Chronic Disease Management",
-    text: "Ongoing care and support for diabetes, hypertension, asthma, and other long-term health conditions.",
-    icon: <Activity size={28} />,
-    image: chronicImg,
-  },
-  {
-    title: "General Health & Wellness",
-    text: "Supporting overall wellbeing through preventive care, lifestyle guidance, health education, and routine medical assessments.",
+    title: "General Health Maintenance",
+    text: "Supporting overall wellbeing through preventive care, health education, lifestyle guidance, and routine medical assessments.",
     icon: <Activity size={28} />,
     image: preventiveImg,
   },
   {
-    title: "Preventive Health Screening",
-    text: "Age-appropriate screening programmes and preventive health assessments to support early detection and intervention.",
-    icon: <ShieldPlus size={28} />,
-    image: preventiveImg,
-  },
-  {
-    title: "Immunisation & Vaccination Services",
-    text: "Recommended and routine immunisations, including seasonal influenza vaccines and age-appropriate vaccination programmes.",
+    title: "Required Immunisation & Vaccination Linkages",
+    text: "Guidance and referrals for required immunisations and vaccinations for school, employment, travel, and public health requirements.",
     icon: <Syringe size={28} />,
     image: vaccineImg,
   },
@@ -79,6 +73,18 @@ const services = [
     title: "Professional Driver Medical Examinations",
     text: "Driver medical examinations and assessments required for commercial and professional licence holders.",
     icon: <Stethoscope size={28} />,
+    image: familyCareImg,
+  },
+  {
+    title: "Age-Appropriate Health Screening",
+    text: "Preventive health screening programmes designed to support early detection and proactive healthcare management.",
+    icon: <ShieldPlus size={28} />,
+    image: preventiveImg,
+  },
+  {
+    title: "Elderly Care Services",
+    text: "Compassionate healthcare and ongoing support for older adults within our community, promoting healthy ageing, independence, and quality of life.",
+    icon: <HeartPulse size={28} />,
     image: familyCareImg,
   },
 ];
@@ -94,8 +100,7 @@ export default function HomeServices() {
 
           <p>
             Comprehensive, patient-centred healthcare services supporting
-            individuals and families throughout Strathmore and the surrounding
-            communities.
+            individuals and families throughout Strathmore for all Albertans and beyond.
           </p>
         </div>
 

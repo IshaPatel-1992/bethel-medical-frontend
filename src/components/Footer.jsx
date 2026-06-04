@@ -18,7 +18,7 @@ export default function Footer() {
           <h3>Bethel Medical Centres</h3>
           <p>
             Your Health is Our Priority. Providing compassionate family medicine
-            and primary healthcare in Strathmore for all Albertians and beyond.
+            and primary healthcare in Strathmore for all Albertans and beyond.
           </p>
           <span className="footer-badge">
             <FaHeart /> Accepting New Patients
@@ -53,7 +53,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <span>© {year} Bethel Medical Centres. All rights reserved.</span>
-        <span>Designed with care for better patient access.</span>
+        <span>Designed with care for better patient experience.</span>
       </div>
     </footer>
   );

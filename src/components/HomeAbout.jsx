@@ -7,7 +7,7 @@ const benefits = [
   "Women’s Health and Men’s Health Services",
   "Compassionate Elderly Care and Community Support",
   "Paediatric Care and Adolescent Health Support",
-  "Chronic Disease Management and Ongoing Care",
+  "Chronic Health Conditions Management and Ongoing Care",
   "Immunisation and Vaccination Services",
   "Professional Driver Medical Examinations",
 ];
@@ -46,7 +46,7 @@ export default function HomeAbout() {
             <p>
               We welcome you and your family for primary care, preventive
               healthcare, annual physical examinations, paediatric care,
-              women&apos;s health services, chronic disease management, and
+              women&apos;s health services, chronic health conditions management, and
               immunisations.
             </p>
           </div>

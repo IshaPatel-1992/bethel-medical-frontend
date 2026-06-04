@@ -1,46 +1,60 @@
 // src/components/Hero.jsx
 import { Link } from "react-router-dom";
 import heroVideo from "../assets/services/1090224597-preview.mp4";
-// import heroImg from "../assets/banners/shutterstock_1426556459_HomePage.jpg";
 
 export default function Hero() {
+  const marqueeItems = [
+    "Accepting New Patients",
+    "Chronic Disease Management",
+    "Preventive Healthcare & Annual Physicals",
+    "Walk-In & Family Medical Services",
+    "Women's Health Services",
+    "Men's Health Services",
+    "Paediatric Care Services",
+    "General Health & Wellness",
+    "Immunisation & Vaccination Services",
+    "Professional Driver Medical Examinations",
+    "Preventive Health Screening",
+  ];
+
   return (
     <>
       <section className="doctors-marquee">
         <div className="doctors-marquee-track">
-          <span>Male & Female Family Physicians Available</span>
-          <span>Professional Driver Medical Examinations</span>
-          <span>Accepting Family Care Inquiries</span>
-          <span>Preventive Health & Annual Physicals</span>
-          <span>Walk-In & Family Medicine Services</span>
-          <span>Pediatric Care Services</span>
-          <span>Chronic Disease Management</span>
-          <span>Vaccinations & Immunization Services</span>
-          <span>Women’s Health Services</span>
+          {[...marqueeItems, ...marqueeItems].map((item, index) => (
+            <span key={index}>{item}</span>
+          ))}
         </div>
       </section>
+
       <section className="hero video-hero">
         <video className="hero-video" autoPlay muted loop playsInline>
           <source src={heroVideo} type="video/mp4" />
         </video>
 
-        {/* <img src={heroImg} alt="Bethel Medical Centre" className="hero-image" /> */}
-
         <div className="hero-overlay" />
 
         <div className="hero-inner">
           <div className="hero-content">
-            <span className="hero-label">Bethel Medical Centre</span>
-            <h1>Compassionate Healthcare for Your Family</h1>
+            <span className="hero-label">Accepting New Patients</span>
+
+            <h1>
+              <span className="hero-brand-name">Bethel Medical Centres</span>
+              <span className="hero-main-title">
+                Compassionate Healthcare for You and Your Family
+              </span>
+            </h1>
+
             <p>
-              Providing modern, reliable, and patient-focused medical care for
-              individuals and families.
+              Providing comprehensive, patient-centred healthcare for individuals
+              and families in Strathmore and the surrounding communities.
             </p>
 
             <div className="hero-actions">
               <Link to="/appointment" className="btn primary">
-                Book Appointment
+                Book an Appointment
               </Link>
+
               <a href="/#services" className="btn secondary">
                 View Services
               </a>
@@ -48,11 +62,31 @@ export default function Hero() {
           </div>
 
           <div className="hero-contact-card">
-            <h3>Contact Clinic</h3>
-            <p><strong>Phone:</strong> 587-251-7220</p>
-            <p><strong>Fax:</strong> 833-527-8678</p>
-            <p><strong>Email:</strong> info@bethelmedicalcentres.ca</p>
-            <p><strong>Location:</strong> 120 Edgefield Place, Strathmore, AB</p>
+            <h3>Clinic Contact Details</h3>
+
+            <a href="tel:+15872517220" className="hero-contact-link">
+              <strong>Phone:</strong> 587-251-7220
+            </a>
+
+            <a href="fax:18335278678" className="hero-contact-link">
+              <strong>Fax:</strong> 833-527-8678
+            </a>
+
+            <a
+              href="mailto:info@bethelmedicalcentres.ca"
+              className="hero-contact-link"
+            >
+              <strong>Email:</strong> info@bethelmedicalcentres.ca
+            </a>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=120+Edgefield+Place+Strathmore+AB"
+              target="_blank"
+              rel="noreferrer"
+              className="hero-contact-link"
+            >
+              <strong>Location:</strong> 120 Edgefield Place, Strathmore, AB
+            </a>
           </div>
         </div>
       </section>

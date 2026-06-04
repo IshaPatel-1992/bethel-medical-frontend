@@ -1,7 +1,7 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
-import logo from "../assets/BethelMedicalCentreLogo.png";
+import { FaPhoneAlt, FaMapMarkerAlt, FaEarlybirds, FaEnvelope } from "react-icons/fa";
+import logo from "../assets/logo/bethel-medical-centres-logo-transparent-website.png";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,17 +29,22 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="top-bar">
-        <span><FaPhoneAlt /> 587-251-7220</span>
-        <span><FaMapMarkerAlt /> 120 Edgefield Place, Strathmore, AB</span>
+        <span>
+          <FaPhoneAlt /> 587-251-7220
+        </span>
+
+        <span>
+          <FaEnvelope /> info@bethelmedicalcentres.ca
+        </span>
+
+        <span>
+          <FaMapMarkerAlt /> 120 Edgefield Place, Strathmore, AB
+        </span>
       </div>
 
       <div className="main-nav">
         <Link to="/" className="brand" onClick={goHomeTop}>
-          <img src={logo} alt="Bethel Medical Centres" className="brand-logo" />
-          <div className="brand-text">
-            <h1>Bethel Medical Centres</h1>
-            <p>Your Health is Our Priority</p>
-          </div>
+          <img src={logo} alt="Bethel Medical Centres" className="brand-logo full-logo" />
         </Link>
 
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>

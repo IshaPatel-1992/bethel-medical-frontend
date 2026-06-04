@@ -1,27 +1,15 @@
 import { Link } from "react-router-dom";
-import { Stethoscope, ShieldPlus, Baby, Activity } from "lucide-react";
 
-const aboutCards = [
-  {
-    title: "Family Medicine",
-    text: "Ongoing healthcare support for patients of all ages.",
-    icon: <Stethoscope size={30} />,
-  },
-  {
-    title: "Preventive Care",
-    text: "Annual physicals, screenings, vaccinations, and wellness exams.",
-    icon: <ShieldPlus size={30} />,
-  },
-  {
-    title: "Children’s Health",
-    text: "Dedicated care for infants, children, and adolescents.",
-    icon: <Baby size={30} />,
-  },
-  {
-    title: "Chronic Care",
-    text: "Support for diabetes, hypertension, asthma, and ongoing conditions.",
-    icon: <Activity size={30} />,
-  },
+const benefits = [
+  "Accepting New Patients and Families",
+  "Comprehensive Family Medical Services",
+  "Preventive Healthcare and Annual Physical Examinations",
+  "Women’s Health and Men’s Health Services",
+  "Compassionate Elderly Care and Community Support",
+  "Paediatric Care and Adolescent Health Support",
+  "Chronic Disease Management and Ongoing Care",
+  "Immunisation and Vaccination Services",
+  "Professional Driver Medical Examinations",
 ];
 
 export default function HomeAbout() {
@@ -32,21 +20,21 @@ export default function HomeAbout() {
           <div>
             <span className="section-label">About Us</span>
 
-            <h2>Your Health is Our Priority</h2>
+            <h2>Your Health and Wellbeing Are Our Priority</h2>
 
             <p>
               Bethel Medical Centres provides modern, reliable, and
-              patient-centered healthcare for individuals and families of all
+              patient-centred healthcare for individuals and families of all
               ages.
             </p>
 
             <p>
               Our goal is to make healthcare easier to access, comfortable to
-              experience, and supportive for long-term wellness.
+              experience, and supportive for long-term health and wellbeing.
             </p>
 
             <Link to="/appointment" className="btn primary">
-              Book Appointment
+              Book an Appointment
             </Link>
           </div>
 
@@ -56,25 +44,31 @@ export default function HomeAbout() {
             <h3>Accepting New Patients</h3>
 
             <p>
-              We welcome you and your family for primary care, preventive care,
-              annual physicals, children’s health, women’s health, chronic
-              disease management, and immunizations.
+              We welcome you and your family for primary care, preventive
+              healthcare, annual physical examinations, paediatric care,
+              women&apos;s health services, chronic disease management, and
+              immunisations.
             </p>
           </div>
         </section>
 
         <section className="about-section">
-          <div className="section-heading-center">
-            <span className="section-label">What We Offer</span>
-            <h2>Care for Every Stage of Life</h2>
+          <div className="section-heading-center about-heading-center">
+            <span className="section-label">Why Choose Us</span>
+
+            <h2>Trusted Healthcare Close to Home</h2>
+
+            <p>
+              At <span className="brand-highlight">BETHEL MEDICAL CENTRES</span>, we provide compassionate, accessible,
+              and patient-centred healthcare for individuals and families
+              throughout Strathmore and the surrounding communities.
+            </p>
           </div>
 
-          <div className="about-cards">
-            {aboutCards.map((card) => (
-              <div className="about-card" key={card.title}>
-                <div className="about-card-icon">{card.icon}</div>
-                <h3>{card.title}</h3>
-                <p>{card.text}</p>
+          <div className="about-benefits">
+            {benefits.map((item) => (
+              <div className="benefit-item" key={item}>
+                ✓ {item}
               </div>
             ))}
           </div>
@@ -82,12 +76,12 @@ export default function HomeAbout() {
 
         <section className="cta-strip">
           <div>
-            <h2>Book Your Appointment Today</h2>
+            <h2>Book an Appointment Today</h2>
             <p>Call us or visit our appointment page to get started.</p>
           </div>
 
           <Link to="/appointment" className="btn primary">
-            Book Appointment
+            Book an Appointment
           </Link>
         </section>
       </div>

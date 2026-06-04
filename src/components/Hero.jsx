@@ -10,6 +10,7 @@ export default function Hero() {
     "Walk-In & Family Medical Services",
     "Women's Health Services",
     "Men's Health Services",
+    "Elderly Care Services",
     "Paediatric Care Services",
     "General Health & Wellness",
     "Immunisation & Vaccination Services",
@@ -38,12 +39,13 @@ export default function Hero() {
           <div className="hero-content">
             <span className="hero-label">Accepting New Patients</span>
 
-            <h1>
-              <span className="hero-brand-name">Bethel Medical Centres</span>
-              <span className="hero-main-title">
-                Compassionate Healthcare for You and Your Family
-              </span>
+            <h1 className="hero-brand-name">
+              BETHEL MEDICAL CENTRES
             </h1>
+
+            <h2 className="hero-tagline">
+              Healthcare for You and Your Family
+            </h2>
 
             <p>
               Providing comprehensive, patient-centred healthcare for individuals

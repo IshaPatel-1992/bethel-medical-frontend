@@ -4,98 +4,198 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaClock,
+  FaDirections,
+  FaNotesMedical,
+  FaCalendarCheck,
+  FaUserPlus,
+  FaWheelchair,
+  FaParking,
+  FaInfoCircle,
 } from "react-icons/fa";
+
+const clinic = {
+  name: "BETHEL MEDICAL CENTRES",
+  phone: "587-251-7220",
+  phoneLink: "+15872517220",
+  fax: "833-527-8678",
+  email: "info@bethelmedicalcentres.ca",
+  address: "120 Edgefield Place, Strathmore, AB T1P 0E8",
+  hours: "Monday – Friday: 9:30 AM – 5:00 PM",
+  holiday: "Closed on statutory holidays",
+};
+
+const directionUrl =
+  "https://www.google.com/maps/search/?api=1&query=120%20Edgefield%20Place%20Strathmore%20AB%20T1P%200E8";
+
+const mapUrl =
+  "https://www.google.com/maps?q=120%20Edgefield%20Place%20Strathmore%20AB%20T1P%200E8&output=embed";
 
 export default function Contact() {
   return (
     <>
       <section className="page-hero">
-        <h1>Contact Us</h1>
+        <h1>{clinic.name}</h1>
         <p>
-          We are here to support you and your family with compassionate healthcare.
+          We are here to support you and your family with compassionate,
+          patient-centred healthcare in Strathmore.
         </p>
       </section>
 
       <section className="section contact-section">
         <div className="section-heading-center">
           <span className="section-label">Get In Touch</span>
-          <h2>Contact Bethel Medical Centres</h2>
+
+          <h2>Clinic Contact Information</h2>
+
           <p>
-            Please call or email the clinic for appointments, inquiries, and
-            patient information.
+            Please contact the clinic for appointments, patient enquiries,
+            registration assistance, medical forms, directions, and appointment
+            availability.
           </p>
         </div>
 
-        <div className="contact-layout">
-          <div className="about-card contact-card">
-            <div className="about-card-icon">
-              <FaMapMarkerAlt />
+        <div className="contact-quick-actions">
+          <a href={`tel:${clinic.phoneLink}`} className="contact-quick-btn primary">
+            <FaPhoneAlt />
+            Call Clinic
+          </a>
+
+          <a href={`mailto:${clinic.email}`} className="contact-quick-btn">
+            <FaEnvelope />
+            Email Clinic
+          </a>
+
+          <a
+            href={directionUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="contact-quick-btn"
+          >
+            <FaDirections />
+            Get Directions
+          </a>
+        </div>
+
+        <div className="contact-overview-grid">
+          <div className="unified-card contact-card">
+            <div className="unified-card-icon">
+              <FaNotesMedical />
             </div>
 
-            <h3>Clinic Information</h3>
+            <h3>{clinic.name}</h3>
 
-            <div className="contact-item">
-              <FaMapMarkerAlt />
-              <span>120 Edgefield Place, Strathmore, AB T1P 0E8</span>
-            </div>
+            <p className="contact-card-text">
+              For appointments, new patient information, walk-in availability,
+              medical forms, and general clinic enquiries.
+            </p>
 
-            <a href="tel:15872517220" className="contact-action-btn phone-btn">
-              <FaPhoneAlt />
-              Call Clinic
-            </a>
+            <div className="contact-info-list">
+              <a href={`tel:${clinic.phoneLink}`} className="contact-info-line">
+                <FaPhoneAlt />
+                <span>{clinic.phone}</span>
+              </a>
 
-            <div className="contact-detail-line">
-              <FaPhoneAlt />
-              <span>587-251-7220</span>
-            </div>
+              <div className="contact-info-line">
+                <FaFax />
+                <span>{clinic.fax}</span>
+              </div>
 
-            <div className="contact-item">
-              <FaFax />
-              <span>833-527-8678</span>
-            </div>
+              <a href={`mailto:${clinic.email}`} className="contact-info-line">
+                <FaEnvelope />
+                <span>{clinic.email}</span>
+              </a>
 
-            <a
-              href="mailto:info@bethelmedicalcentres.ca"
-              className="contact-action-btn email-btn"
-            >
-              <FaEnvelope />
-              Email Clinic
-            </a>
-
-            <div className="contact-detail-line">
-              <FaEnvelope />
-              <span>info@bethelmedicalcentres.ca</span>
+              <a
+                href={directionUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="contact-info-line"
+              >
+                <FaMapMarkerAlt />
+                <span>{clinic.address}</span>
+              </a>
             </div>
           </div>
 
-          <div className="about-card contact-card">
-            <div className="about-card-icon">
+          <div className="unified-card contact-card">
+            <div className="unified-card-icon">
               <FaClock />
             </div>
 
             <h3>Clinic Hours</h3>
 
-            <div className="hours-row">
-              <span>Monday – Friday</span>
-              <strong>Please call clinic</strong>
+            <div className="hours-clean-list">
+              <div className="hours-clean-row">
+                <span>Monday – Friday</span>
+                <strong>9:30 AM – 5:00 PM</strong>
+              </div>
+
+              <div className="hours-clean-row holiday">
+                <span>Statutory Holidays</span>
+                <strong>Closed</strong>
+              </div>
             </div>
 
-            <div className="hours-row">
-              <span>Saturday</span>
-              <strong>Please call clinic</strong>
-            </div>
-
-            <div className="hours-row">
-              <span>Sunday</span>
-              <strong>Closed</strong>
-            </div>
-
-            <div className="hours-note">
-              <FaClock />
+            <div className="contact-note">
+              <FaInfoCircle />
               <span>
                 Appointment availability may vary. Please call before visiting.
               </span>
             </div>
+          </div>
+
+          <div className="unified-card contact-card">
+            <div className="unified-card-icon">
+              <FaUserPlus />
+            </div>
+
+            <h3>New Patients</h3>
+
+            <p className="contact-card-text">
+              BETHEL MEDICAL CENTRES is accepting new patients and families.
+              Please call, email, or complete the online booking request form
+              from the appointment page.
+            </p>
+
+            <a href="/appointment" className="contact-inline-btn">
+              <FaCalendarCheck />
+              Request an Appointment
+            </a>
+          </div>
+
+          <div className="unified-card contact-card">
+            <div className="unified-card-icon">
+              <FaMapMarkerAlt />
+            </div>
+
+            <h3>Visit Information</h3>
+
+            <div className="visit-feature-list">
+              <div>
+                <FaParking />
+                Parking available
+              </div>
+
+              <div>
+                <FaWheelchair />
+                Accessible location
+              </div>
+
+              <div>
+                <FaDirections />
+                Located in Strathmore, AB
+              </div>
+            </div>
+
+            <a
+              href={directionUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="contact-inline-btn secondary"
+            >
+              <FaDirections />
+              Open in Google Maps
+            </a>
           </div>
         </div>
 
@@ -103,35 +203,37 @@ export default function Contact() {
           <div className="location-map-header">
             <div>
               <span className="section-label">Our Location</span>
-              <h3>Visit Bethel Medical Centres</h3>
+
+              <h3>Find {clinic.name}</h3>
+
               <p>
-                Conveniently located in Strathmore, AB. Please call before visiting for
-                appointment availability.
+                Conveniently located in Strathmore, Alberta. Please contact the
+                clinic before visiting for appointment availability.
               </p>
             </div>
 
             <a
-              href="https://www.google.com/maps/search/?api=1&query=120%20Edgefield%20Place%20Strathmore%20AB%20T1P%200E8"
+              href={directionUrl}
               target="_blank"
               rel="noreferrer"
               className="map-direction-btn"
             >
-              <FaMapMarkerAlt />
-              Open in Google Maps
+              <FaDirections />
+              Directions
             </a>
           </div>
 
           <div className="map-address-pill">
             <FaMapMarkerAlt />
-            <span>120 Edgefield Place, Strathmore, AB T1P 0E8</span>
+            <span>{clinic.address}</span>
           </div>
 
           <div className="map-section">
             <iframe
-              title="Bethel Medical Centres Map"
-              src="https://www.google.com/maps?q=120%20Edgefield%20Place%20Strathmore%20AB%20T1P%200E8&output=embed"
+              title="BETHEL MEDICAL CENTRES Map"
+              src={mapUrl}
               loading="lazy"
-            ></iframe>
+            />
           </div>
         </div>
       </section>

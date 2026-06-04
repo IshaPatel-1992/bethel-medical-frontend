@@ -16,40 +16,70 @@ import vaccineImg from "../assets/services/edited/bethel-flu-vaccination-immuniz
 
 const services = [
   {
-    title: "Family Medicine & Primary Care",
-    text: "Ongoing health management and primary care for individuals and families of all ages.",
+    title: "Walk-In & Family Medical Services",
+    text: "Comprehensive primary healthcare services for individuals and families, including diagnosis, treatment, and ongoing medical support.",
     icon: <Stethoscope size={28} />,
     image: familyCareImg,
   },
   {
-    title: "Preventive Health & Annual Physicals",
-    text: "Routine checkups, wellness exams, screenings, and annual physicals.",
+    title: "Preventive Healthcare & Annual Physicals",
+    text: "Routine health assessments, annual physical examinations, wellness checks, and preventive healthcare services.",
     icon: <ShieldPlus size={28} />,
     image: preventiveImg,
   },
   {
-    title: "Pediatrics & Well-Child Checks",
-    text: "Dedicated care for infants, children, and adolescents.",
+    title: "Paediatric Care Services",
+    text: "Dedicated healthcare services for infants, children, and adolescents.",
     icon: <Baby size={28} />,
     image: pediatricImg,
   },
   {
-    title: "Women’s Health",
-    text: "Annual exams, Pap smears, family planning, and women’s wellness support.",
+    title: "Women’s Health Services",
+    text: "Comprehensive healthcare services including routine examinations, cervical screening, family planning, and preventive care.",
     icon: <HeartPulse size={28} />,
     image: womenHealthImg,
   },
   {
+    title: "Men’s Health Services",
+    text: "Preventive healthcare, routine assessments, health screening, and medical support tailored to men's health needs.",
+    icon: <HeartPulse size={28} />,
+    image: familyCareImg,
+  },
+  {
+  title: "Elderly Care Services",
+  text: "Compassionate healthcare and ongoing support for older adults within our community, promoting healthy ageing, independence, and quality of life.",
+  icon: <HeartPulse size={28} />,
+  image: familyCareImg,
+},
+  {
     title: "Chronic Disease Management",
-    text: "Support for diabetes, hypertension, asthma, and other ongoing concerns.",
+    text: "Ongoing care and support for diabetes, hypertension, asthma, and other long-term health conditions.",
     icon: <Activity size={28} />,
     image: chronicImg,
   },
   {
-    title: "Immunizations & Vaccinations",
-    text: "Required and recommended vaccinations including flu, COVID-19, and routine immunizations.",
+    title: "General Health & Wellness",
+    text: "Supporting overall wellbeing through preventive care, lifestyle guidance, health education, and routine medical assessments.",
+    icon: <Activity size={28} />,
+    image: preventiveImg,
+  },
+  {
+    title: "Preventive Health Screening",
+    text: "Age-appropriate screening programmes and preventive health assessments to support early detection and intervention.",
+    icon: <ShieldPlus size={28} />,
+    image: preventiveImg,
+  },
+  {
+    title: "Immunisation & Vaccination Services",
+    text: "Recommended and routine immunisations, including seasonal influenza vaccines and age-appropriate vaccination programmes.",
     icon: <Syringe size={28} />,
     image: vaccineImg,
+  },
+  {
+    title: "Professional Driver Medical Examinations",
+    text: "Driver medical examinations and assessments required for commercial and professional licence holders.",
+    icon: <Stethoscope size={28} />,
+    image: familyCareImg,
   },
 ];
 
@@ -59,10 +89,13 @@ export default function HomeServices() {
       <div className="section">
         <div className="section-heading-center">
           <span className="section-label">Our Services</span>
-          <h2>Comprehensive Healthcare Services</h2>
+
+          <h2>Healthcare Services for Every Stage of Life</h2>
+
           <p>
-            Medical care designed to support you and your family at every stage
-            of life.
+            Comprehensive, patient-centred healthcare services supporting
+            individuals and families throughout Strathmore and the surrounding
+            communities.
           </p>
         </div>
 

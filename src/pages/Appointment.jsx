@@ -1,3 +1,4 @@
+// src/pages/Appointment.jsx
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -5,23 +6,20 @@ import {
   FaClock,
   FaClinicMedical,
   FaCalendarCheck,
+  FaLaptopMedical,
 } from "react-icons/fa";
 
-//import heroVideo from "../assets/services/banners/1090224597-preview.mp4";
-// Optional image instead of video
- import heroImage from "../assets/services/banners/shutterstock_2681519119.jpg";
+import heroImage from "../assets/services/banners/shutterstock_2681519119.jpg";
 
 export default function Appointment() {
   return (
     <>
-      {/* HERO SECTION */}
       <section className="appointment-hero">
-        {/* <video className="appointment-hero-video" autoPlay muted loop playsInline>
-          <source src={heroVideo} type="video/mp4" />
-        </video> */}
-
-        {/* IMAGE OPTION */}
-         <img src={heroImage} alt="Appointments" className="appointment-hero-image" /> 
+        <img
+          src={heroImage}
+          alt="Appointments"
+          className="appointment-hero-image"
+        />
 
         <div className="appointment-hero-overlay" />
 
@@ -40,21 +38,19 @@ export default function Appointment() {
         </div>
       </section>
 
-      {/* APPOINTMENT CONTENT */}
       <section className="section appointment-section">
         <div className="section-heading-center">
           <span className="section-label">Book Your Visit</span>
 
-          <h2>Phone & Email Booking Available</h2>
+          <h2>Phone, Email & Online Booking Available</h2>
 
           <p>
-            No online form is required. Please contact the clinic directly for
-            appointments and patient inquiries.
+            Please contact the clinic directly or complete the online booking
+            form below for appointment requests and patient enquiries.
           </p>
         </div>
 
         <div className="appointment-layout">
-          {/* PHONE */}
           <div className="about-card appointment-card">
             <div className="about-card-icon">
               <FaPhoneAlt />
@@ -67,10 +63,7 @@ export default function Appointment() {
               one of our healthcare providers.
             </p>
 
-            <a
-              href="tel:15872517220"
-              className="appointment-action-btn phone-btn"
-            >
+            <a href="tel:+15872517220" className="appointment-action-btn phone-btn">
               <FaPhoneAlt />
               Call Clinic
             </a>
@@ -81,7 +74,6 @@ export default function Appointment() {
             </div>
           </div>
 
-          {/* EMAIL */}
           <div className="about-card appointment-card">
             <div className="about-card-icon">
               <FaEnvelope />
@@ -90,7 +82,7 @@ export default function Appointment() {
             <h3>Book by Email</h3>
 
             <p>
-              Email us for appointment requests, patient inquiries, and clinic
+              Email us for appointment requests, patient enquiries, and clinic
               information.
             </p>
 
@@ -108,7 +100,6 @@ export default function Appointment() {
             </div>
           </div>
 
-          {/* NEW PATIENTS */}
           <div className="about-card appointment-card highlight">
             <div className="about-card-icon">
               <FaUserPlus />
@@ -122,11 +113,11 @@ export default function Appointment() {
             </p>
 
             <div className="coming-soon">
-              Please call or email for registration assistance.
+              Please call, email, or complete the online form for registration
+              assistance.
             </div>
           </div>
 
-          {/* SERVICES */}
           <div className="about-card appointment-card highlight">
             <div className="about-card-icon">
               <FaClinicMedical />
@@ -136,14 +127,42 @@ export default function Appointment() {
 
             <p>
               Family medicine, preventive care, annual physicals, women’s
-              health, pediatric care, chronic disease management, and
-              immunizations.
+              health, paediatric care, chronic disease management, and
+              immunisations.
             </p>
 
             <div className="clinic-hours">
               <FaClock />
               <span>Please call clinic for hours & availability.</span>
             </div>
+          </div>
+        </div>
+
+        <div className="online-booking-section">
+          <div className="online-booking-header">
+            <div>
+              <span className="section-label">Online Booking</span>
+              <h2>Request an Appointment Online</h2>
+              <p>
+                Complete the secure online form below and the clinic team will
+                review your request.
+              </p>
+            </div>
+
+            <div className="online-booking-icon">
+              <FaLaptopMedical />
+            </div>
+          </div>
+
+          <div className="online-booking-frame">
+            <iframe
+              title="Bethel Medical Centres Online Booking Form"
+              src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=6R4QidePiUSVsRc25r_ZDmaWKYbkr7FOhHw_SP78vxlUNVQ4NTFNUTBNMks1T0JFOVU5WkFFNDlJRS4u&embed=true"
+              frameBorder="0"
+              marginWidth="0"
+              marginHeight="0"
+              allowFullScreen
+            />
           </div>
         </div>
       </section>

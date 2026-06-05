@@ -9,7 +9,7 @@ import {
   FaLaptopMedical,
 } from "react-icons/fa";
 
-import heroImage from "../assets/services/banners/shutterstock_2681519119.jpg";
+import heroImage from "../assets/banners/shutterstock_2681519119_optimized.webp";
 
 export default function Appointment() {
   return (

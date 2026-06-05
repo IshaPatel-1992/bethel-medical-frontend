@@ -13,6 +13,8 @@ import {
   FaInfoCircle,
 } from "react-icons/fa";
 
+import contactBanner from "../assets/banners/shutterstock_1937449273_optimized.webp";
+
 const clinic = {
   name: "BETHEL MEDICAL CENTRES",
   phone: "587-251-7220",
@@ -33,12 +35,42 @@ const mapUrl =
 export default function Contact() {
   return (
     <>
-      <section className="page-hero">
-        <h1>{clinic.name}</h1>
-        <p>
-          We are here to support you and your family with compassionate,
-          patient-centred healthcare in Strathmore.
-        </p>
+      <section
+        className="page-hero page-hero-banner"
+        style={{
+          backgroundImage: `linear-gradient(
+      rgba(15,45,75,0.75),
+      rgba(15,45,75,0.75)
+    ), url(${contactBanner})`,
+        }}
+      >
+        <div className="page-hero-content">
+          <span className="hero-badge">Contact Us</span>
+
+          <h1>{clinic.name}</h1>
+
+          <p>
+            We are here to support you and your family with compassionate,
+            patient-centred healthcare in Strathmore.
+          </p>
+
+          <div className="hero-contact-actions">
+            <a href={`tel:${clinic.phoneLink}`} className="hero-btn primary">
+              <FaPhoneAlt />
+              Call Now
+            </a>
+
+            <a
+              href={directionUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="hero-btn secondary"
+            >
+              <FaDirections />
+              Get Directions
+            </a>
+          </div>
+        </div>
       </section>
 
       <section className="section contact-section">

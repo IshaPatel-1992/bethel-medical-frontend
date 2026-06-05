@@ -7,19 +7,23 @@ import {
   FaStethoscope,
 } from "react-icons/fa";
 
-import heroVideo from "../assets/services/1090224597-preview.mp4";
+import imgHero from "../assets/banners/shutterstock_2544841683_optimized.webp";
 
 const marqueeItems = [
-  "Male & Female Family Physicians Available",
-  "Professional Driver Medical Examinations",
-  "Accepting Family Care Enquiries",
-  "Preventive Healthcare & Annual Physicals",
-  "Walk-In & Family Medical Services",
-  "Paediatric Care Services",
-  "Chronic Disease Management",
-  "Immunisation & Vaccination Services",
-  "Women’s Health Services",
-];
+    "Accepting New Patients",
+    "Chronic Health Conditions Management and Ongoing Care",
+    "Preventive Healthcare & Annual Physicals",
+    "Walk-In & Family Medical Services",
+    "Women's Health Services",
+    "Men's Health Services",
+    "Elderly Care Services",
+    "Paediatric Care Services",
+    "General Health & Wellness",
+    "Immunisation & Vaccination Services",
+    "Professional Driver Medical Examinations",
+    "Preventive Health Screening",
+  ];
+
 
 const doctors = [
   {
@@ -50,22 +54,21 @@ export default function Doctors() {
       </section>
 
       <section className="doctors-hero">
-        <video className="doctors-hero-video" autoPlay muted loop playsInline>
-          <source src={heroVideo} type="video/mp4" />
-        </video>
+        <img src={imgHero} alt="Doctors Hero" className="doctors-hero-image" />
 
         <div className="doctors-hero-overlay" />
 
         <div className="doctors-hero-content">
           <span>
-            <FaStethoscope /> Our Medical Team
+            <FaStethoscope /> Experienced Family Physicians
           </span>
 
-          <h1>Our Doctors</h1>
+          <h1>Meet Our Medical Team</h1>
 
           <p>
-            Meet the caring healthcare professionals supporting your health and
-            wellbeing.
+            Dedicated family physicians providing compassionate,
+            patient-centred healthcare for individuals and families
+            in Strathmore and surrounding communities.
           </p>
         </div>
       </section>

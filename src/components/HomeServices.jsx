@@ -11,15 +11,20 @@ import familyCareImg from "../assets/services/edited/bethel-family-medicine-card
 import preventiveImg from "../assets/services/edited/bethel-preventive-health-card.webp";
 import pediatricImg from "../assets/services/edited/bethel-pediatric.png";
 import womenHealthImg from "../assets/services/edited/bethel-womens-health-card.png";
+import menHealthImg from "../assets/services/edited/bethel-mens-health-services-card.jpg";
 import chronicImg from "../assets/services/edited/bethel-services-chronic-disease-card.png";
 import vaccineImg from "../assets/services/edited/bethel-flu-vaccination-immunization-card.png";
+import ageScreeningImg from "../assets/services/edited/bethel-age-appropriate-screening-card.jpg";
+import elderlyCareImg from "../assets/services/edited/bethel-elderly-care-card.jpg";
+import driverExamImg from "../assets/services/edited/bethel-driver-medical-examination-card1.jpg";
+import acceptingPatientsImg from "../assets/services/edited/bethel-accepting-new-patients-card.jpg";
 
 const services = [
   {
     title: "Accepting New Patients",
     text: "Welcoming new patients and families seeking comprehensive primary healthcare services.",
     icon: <Stethoscope size={28} />,
-    image: familyCareImg,
+    image: acceptingPatientsImg,
   },
   {
     title: "Chronic Health Conditions Management",
@@ -49,7 +54,7 @@ const services = [
     title: "Men's Health Services",
     text: "Preventive healthcare, routine assessments, health screening, and medical support tailored to men's health needs.",
     icon: <HeartPulse size={28} />,
-    image: familyCareImg,
+    image: menHealthImg,
   },
   {
     title: "Paediatric Care Services",
@@ -73,19 +78,19 @@ const services = [
     title: "Professional Driver Medical Examinations",
     text: "Driver medical examinations and assessments required for commercial and professional licence holders.",
     icon: <Stethoscope size={28} />,
-    image: familyCareImg,
+    image: driverExamImg,
   },
   {
     title: "Age-Appropriate Health Screening",
     text: "Preventive health screening programmes designed to support early detection and proactive healthcare management.",
     icon: <ShieldPlus size={28} />,
-    image: preventiveImg,
+    image: ageScreeningImg,
   },
   {
     title: "Elderly Care Services",
     text: "Compassionate healthcare and ongoing support for older adults within our community, promoting healthy ageing, independence, and quality of life.",
     icon: <HeartPulse size={28} />,
-    image: familyCareImg,
+    image: elderlyCareImg,
   },
 ];
 

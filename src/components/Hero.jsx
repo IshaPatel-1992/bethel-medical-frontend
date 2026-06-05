@@ -1,6 +1,6 @@
 // src/components/Hero.jsx
 import { Link } from "react-router-dom";
-import heroVideo from "../assets/services/1090224597-preview.mp4";
+import heroVideo from "../assets/banners/shutterstock_1044952411.mp4";
 
 export default function Hero() {
   const marqueeItems = [

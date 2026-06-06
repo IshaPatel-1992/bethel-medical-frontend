@@ -6,6 +6,10 @@ import {
   FaMapMarkerAlt,
   FaClock,
   FaHeart,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -43,12 +47,82 @@ export default function Footer() {
 
         <section className="footer-contact">
           <h4>Contact Clinic</h4>
-          <p><FaMapMarkerAlt /> 120 Edgefield Place, Strathmore, AB T1P 0E8</p>
-          <p><FaPhoneAlt /> <a href="tel:15872517220">587-251-7220</a></p>
-          <p><FaFax /> 833-527-8678</p>
-          <p><FaEnvelope /> <a href="mailto:info@bethelmedicalcentres.ca">info@bethelmedicalcentres.ca</a></p>
-          <p><FaClock /> Please call for clinic hours & availability.</p>
+
+          <p>
+            <FaMapMarkerAlt />
+            120 Edgefield Place, Strathmore, AB T1P 0E8
+          </p>
+
+          <p>
+            <FaPhoneAlt />
+            <a href="tel:+15872517220">587-251-7220</a>
+          </p>
+
+          <p>
+            <FaFax />
+            833-527-8678
+          </p>
+
+          <p>
+            <FaEnvelope />
+            <a href="mailto:info@bethelmedicalcentres.ca">
+              info@bethelmedicalcentres.ca
+            </a>
+          </p>
+
+          <div className="footer-hours">
+            <p>
+              <FaClock />
+              <span>Monday – Friday: 9:30 AM – 5:00 PM</span>
+            </p>
+
+            <p className="hours-indent">
+              Saturdays, Sundays & Statutory Holidays: Closed
+            </p>
+          </div>
+
         </section>
+        <div className="footer-social">
+  <h4>Follow Us</h4>
+
+  <div className="social-icons">
+    <a
+      href="https://facebook.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook"
+    >
+      <FaFacebookF />
+    </a>
+
+    <a
+      href="https://instagram.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+    >
+      <FaInstagram />
+    </a>
+
+    <a
+      href="https://linkedin.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn"
+    >
+      <FaLinkedinIn />
+    </a>
+
+    <a
+      href="https://youtube.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="YouTube"
+    >
+      <FaYoutube />
+    </a>
+  </div>
+</div>
       </div>
 
       <div className="footer-bottom">

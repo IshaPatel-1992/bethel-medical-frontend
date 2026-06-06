@@ -1,7 +1,7 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaPhoneAlt, FaMapMarkerAlt, FaEarlybirds, FaEnvelope } from "react-icons/fa";
-import logo from "../assets/logo/bethel-medical-centres-logo-transparent-website.png";
+import logo from "../assets/logo/bethel-logo-transparent-05062026.png";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

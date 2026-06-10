@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import {
   HeartPulse,
   Stethoscope,
@@ -22,13 +24,13 @@ import acceptingPatientsImg from "../assets/services/edited/bethel-accepting-new
 const services = [
   {
     title: "Accepting New Patients",
-    text: "Welcoming new patients and families seeking comprehensive primary healthcare services.",
+    text: "Welcoming new patients and families in Strathmore seeking comprehensive primary healthcare services.",
     icon: <Stethoscope size={28} />,
     image: acceptingPatientsImg,
   },
   {
     title: "Chronic Health Conditions Management",
-    text: "Ongoing care and support for diabetes, hypertension, asthma, and other ongoing long-term health conditions.",
+    text: "Ongoing care and support for diabetes, hypertension, asthma, and other long-term health conditions.",
     icon: <Activity size={28} />,
     image: chronicImg,
   },
@@ -40,13 +42,13 @@ const services = [
   },
   {
     title: "Walk-In & Family Medical Services",
-    text: "Comprehensive primary healthcare services for individuals and families, including diagnosis, treatment, and ongoing medical care.",
+    text: "Primary healthcare services for individuals and families, including diagnosis, treatment, and ongoing medical care.",
     icon: <Stethoscope size={28} />,
     image: familyCareImg,
   },
   {
     title: "Women's Health Services",
-    text: "Comprehensive healthcare services including mammogram referrals, breast ultrasound referrals, routine examinations, cervical screening, family planning, and preventive care.",
+    text: "Healthcare services including mammogram referrals, breast ultrasound referrals, routine examinations, cervical screening, family planning, and preventive care.",
     icon: <HeartPulse size={28} />,
     image: womenHealthImg,
   },
@@ -58,7 +60,7 @@ const services = [
   },
   {
     title: "Paediatric Care Services",
-    text: "Dedicated healthcare services for infants, children, and adolescents.",
+    text: "Dedicated healthcare services for infants, children, and adolescents in Strathmore and surrounding communities.",
     icon: <Baby size={28} />,
     image: pediatricImg,
   },
@@ -88,7 +90,7 @@ const services = [
   },
   {
     title: "Elderly Care Services",
-    text: "Compassionate healthcare and ongoing support for older adults within our community, promoting healthy ageing, independence, and quality of life.",
+    text: "Compassionate healthcare and ongoing support for older adults, promoting healthy ageing, independence, and quality of life.",
     icon: <HeartPulse size={28} />,
     image: elderlyCareImg,
   },
@@ -96,37 +98,52 @@ const services = [
 
 export default function HomeServices() {
   return (
-    <section id="services" className="services-home-section">
+    <section
+      id="services"
+      className="services-home-section"
+      aria-labelledby="home-services-heading"
+    >
       <div className="section">
         <div className="section-heading-center">
           <span className="section-label">Our Services</span>
 
-          <h2>Healthcare Services for Every Stage of Life</h2>
+          <h2 id="home-services-heading">
+            Healthcare Services for Every Stage of Life
+          </h2>
 
           <p>
             Comprehensive, patient-centred healthcare services supporting
-            individuals and families throughout Strathmore for all Albertans and beyond.
+            individuals and families in Strathmore, Wheatland County, and
+            surrounding Alberta communities.
           </p>
         </div>
 
         <div className="service-grid">
           {services.map((service) => (
-            <div className="service-card" key={service.title}>
+            <Link
+              to="/appointment"
+              className="service-card"
+              key={service.title}
+              aria-label={`Book an appointment for ${service.title} at Bethel Medical Centres`}
+            >
               <div className="service-image-wrapper">
                 <img
                   src={service.image}
-                  alt={service.title}
+                  alt={`${service.title} at Bethel Medical Centres in Strathmore, Alberta`}
                   className="service-image"
+                  loading="lazy"
                 />
 
-                <div className="service-icon">{service.icon}</div>
+                <div className="service-icon" aria-hidden="true">
+                  {service.icon}
+                </div>
               </div>
 
               <div className="service-content">
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

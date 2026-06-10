@@ -8,21 +8,22 @@ import {
 } from "react-icons/fa";
 
 import imgHero from "../assets/banners/shutterstock_2544841683_optimized.webp";
+import SEO from "../components/SEO.jsx";
 
 const marqueeItems = [
-    "Accepting New Patients",
-    "Chronic Health Conditions Management and Ongoing Care",
-    "Preventive Healthcare & Annual Physicals",
-    "Walk-In & Family Medical Services",
-    "Women's Health Services",
-    "Men's Health Services",
-    "Elderly Care Services",
-    "Paediatric Care Services",
-    "General Health & Wellness",
-    "Immunisation & Vaccination Services",
-    "Professional Driver Medical Examinations",
-    "Preventive Health Screening",
-  ];
+  "Accepting New Patients",
+  "Chronic Health Conditions Management and Ongoing Care",
+  "Preventive Healthcare & Annual Physicals",
+  "Walk-In & Family Medical Services",
+  "Women's Health Services",
+  "Men's Health Services",
+  "Elderly Care Services",
+  "Paediatric Care Services",
+  "General Health & Wellness",
+  "Immunisation & Vaccination Services",
+  "Professional Driver Medical Examinations",
+  "Preventive Health Screening",
+];
 
 
 const doctors = [
@@ -45,6 +46,11 @@ const doctors = [
 export default function Doctors() {
   return (
     <>
+      <SEO
+        title="Doctors | Bethel Medical Centres Strathmore"
+        description="Meet the family physicians at Bethel Medical Centres in Strathmore, Alberta. Our medical team provides compassionate, patient-centred primary healthcare for individuals and families."
+        path="/doctors"
+      />
       <section className="doctors-marquee">
         <div className="doctors-marquee-track">
           {[...marqueeItems, ...marqueeItems].map((item, index) => (

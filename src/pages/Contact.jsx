@@ -12,6 +12,7 @@ import {
   FaParking,
   FaInfoCircle,
 } from "react-icons/fa";
+import SEO from "../components/SEO.jsx";
 
 import contactBanner from "../assets/banners/shutterstock_1937449273_optimized.webp";
 
@@ -35,6 +36,11 @@ const mapUrl =
 export default function Contact() {
   return (
     <>
+    <SEO
+  title="Contact Bethel Medical Centres | Strathmore Medical Clinic"
+  description="Contact Bethel Medical Centres in Strathmore, Alberta for appointments, clinic information, directions, patient enquiries, medical forms, and new patient registration assistance."
+  path="/contact"
+/>
       <section
         className="page-hero page-hero-banner"
         style={{

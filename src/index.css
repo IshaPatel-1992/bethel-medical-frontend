@@ -744,7 +744,11 @@ section[id],
   position: relative;
   border-radius: 28px;
   overflow: hidden;
+    text-decoration: none;
+  color: inherit;
 }
+
+
 
 .service-image-wrapper {
   position: relative;

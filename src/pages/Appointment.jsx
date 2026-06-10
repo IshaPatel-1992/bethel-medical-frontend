@@ -8,12 +8,17 @@ import {
   FaCalendarCheck,
   FaLaptopMedical,
 } from "react-icons/fa";
-
+import SEO from "../components/SEO.jsx";
 import heroImage from "../assets/banners/shutterstock_2681519119_optimized.webp";
 
 export default function Appointment() {
   return (
     <>
+    <SEO
+  title="Book an Appointment | Bethel Medical Centres Strathmore"
+  description="Request an appointment with Bethel Medical Centres in Strathmore. New patients and families are welcome for family medicine and primary healthcare services."
+  path="/appointment"
+/>
       <section className="appointment-hero">
         <img
           src={heroImage}
